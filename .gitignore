@@ -1,0 +1,8 @@
+#crossworks backup files
+*.bak
+*.hzs
+*.asv
+
+#build directories
+* MSP430 Debug/
+* MSP430 Release/
