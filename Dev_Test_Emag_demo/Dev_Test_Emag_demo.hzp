@@ -26,6 +26,7 @@
       <file file_name="subsystem.c" />
       <file file_name="coils.c" />
       <file file_name="coils.h" />
+      <file file_name="LED.h" />
     </folder>
     <folder Name="System Files">
       <configuration Name="Common" filter="xml" />

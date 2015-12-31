@@ -1,10 +1,17 @@
 #include <msp430.h>
 #include "coils.h"
+#include <math.h>
+#include "LED.h"
+
+
+int spin=0;
+//unsigned short coil_mag=0;
+float coil_sd=0,spin_t=0,coil_mag=0;
 
 
 // init. timers using 4.0,4.1 | IO pins enagble and dir. | 
 void coils_init(void){
-  // TA0 
+  // TA0_CRRx
   TA0CTL=TASSEL__SMCLK|ID_0|TACLR;
   //CCR0
   TA0CCR0=COIL_PWM_PER;
@@ -14,6 +21,15 @@ void coils_init(void){
   //CRR2
   TA0CCR2=0;
   TA0CCTL2=OUTMOD_7;
+  
+  //TA2_CCRx
+  TA2CTL=TASSEL__ACLK|ID_0|TACLR;
+  //CRR0
+  TA2CCR0=COIL_SPIN_PER;
+  //set interupt 
+  TA2CCTL0=CCIE;
+
+
  // port mapping 
   // unlock port mapping functions
   PMAPKEYID=PMAPKEY;
@@ -34,12 +50,14 @@ void coils_init(void){
   P4OUT &=~(BIT2|BIT4);
   P4SEL0&=~(BIT1|BIT2|BIT3|BIT4);
   P4DIR |= (BIT1|BIT2|BIT3|BIT4);
+
   
 }
 
 void coils_timer_start(void){
   //starts the timer in the mode we selected
   TA0CTL|=MC__UP;
+  TA2CTL|=MC__CONTINOUS;
 }
 
 void coil_PWM(short pwm1,short pwm2){
@@ -59,6 +77,35 @@ void coil_PWM(short pwm1,short pwm2){
   // sets PWM to user def.
   COIL1_PWM=pwm1;
   COIL2_PWM=pwm2;
+  
+  
+}
 
+void spin_interupt(void) __ctl_interrupt[TIMER2_A0_VECTOR]{
+  //led for time
+  LED3;
+  // resets the intrrupt 
+  TA2CCR0+=COIL_SPIN_PER;
+  // check for spin mode
+  if (spin){
+    // increments mag field dir. (fmod makes sure nothing is overrun)
+    spin_t=fmod(coil_sd+spin_t,PI*2); 
+    // drive coils
+    coil_PWM(coil_mag*sin(spin_t),coil_mag*cos(spin_t));
+  }
+  LED3OFF;
+}
 
+void coil_spin(float sd,unsigned short mag){
+  // set sd and mag globally
+  coil_mag=mag;
+  coil_sd=sd*COIL_SPIN_PER/32.768e3;
+  if(sd!=0){
+    //set spin mode
+    spin=1;
+  }else{
+    //set spin to zero
+    spin=0;
+    coil_PWM(0,0);
+  }
 }
