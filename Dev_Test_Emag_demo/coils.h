@@ -26,8 +26,10 @@ extern int spin;
 
 //function prototype,lets header files know about functions
 void coils_init(void);
-void coils_timer_start(void);
+void coils_start(void);
 void coil_PWM(short pwm1,short pwm2);
 void coil_spin(float sd,unsigned short mag);
+void coil_ADC_start(void);
+void coil_ADC_stop(void);
 
 #endif 

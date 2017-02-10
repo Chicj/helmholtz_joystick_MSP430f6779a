@@ -36,7 +36,8 @@ void main(void){
   //TESTING: set log level to report everything by default
   set_error_level(0);
   //initialize UART
-  UCA1_init_UART(UART_PORT,UART_TX_PIN_NUM,UART_RX_PIN_NUM);
+  //NOTE old code UCA1_init_UART(UART_PORT,UART_TX_PIN_NUM,UART_RX_PIN_NUM);
+  UCA1_init_UART();
 
   // innit. coil timer and stuff
   coils_init();
@@ -46,7 +47,7 @@ void main(void){
   //init complete turn on LED0 and all others off
   P7OUT=BIT0;
   // starts coil timer
-  coils_timer_start();
+  coils_start();
 
   ctl_task_run(&terminal_task,BUS_PRI_LOW,terminal,"ARClib testing program ready","terminal",sizeof(terminal_stack)/sizeof(terminal_stack[0])-2,terminal_stack-1,0);
   ctl_task_run(&sub_task,BUS_PRI_HIGH,sub_events,NULL,"SUB_events",sizeof(sub_stack)/sizeof(sub_stack[0])-2,sub_stack-1,0);

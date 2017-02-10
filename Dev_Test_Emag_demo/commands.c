@@ -67,6 +67,7 @@ int matlab_cmd(char *argv[],unsigned short argc){
   unsigned short mag;
   float sd;
   double yaw;
+  coil_ADC_start();
   while(run){
     if(gets_s(buffer,sizeof(buffer))==NULL){
       break;
@@ -112,6 +113,8 @@ int matlab_cmd(char *argv[],unsigned short argc){
   }
   LED1OFF;
   LED2OFF;
+  //stop ADC sampl
+  coil_ADC_stop();
   //turn off spinning
   coil_spin(0,0);
   // turn "off" coil

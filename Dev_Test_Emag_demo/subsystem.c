@@ -6,15 +6,6 @@
 #include "pins.h"
 #include "subsystem.h"
 
-//handle subsystem spesific commands
-int SUB_parseCmd(unsigned char src,unsigned char cmd,unsigned char *dat,unsigned short len){
-  switch(cmd){
-    default:
-      return ERR_UNKNOWN_CMD;
-  }
-}
-
-
 //parse subsystem events
 void sub_events(void *p) __toplevel{
   unsigned int e,len;
@@ -39,7 +30,7 @@ void sub_events(void *p) __toplevel{
       ptr=BUS_cmd_init(buf,CMD_EPS_STAT);
       //TODO: fill in telemitry data
       //send command
-      BUS_cmd_tx(BUS_ADDR_CDH,buf,0,0,BUS_I2C_SEND_FOREGROUND);
+//NOTE dont need this for the demo      BUS_cmd_tx(BUS_ADDR_CDH,buf,0,0);
     }
     if(e&SUB_EV_SPI_DAT){
         //get length
