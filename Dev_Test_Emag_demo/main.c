@@ -3,7 +3,7 @@
 #include <ARCbus.h>
 #include <Error.h>
 #include <terminal.h>
-#include <UCA1_uart.h>
+#include <UCA2_uart.h>        // Updated
 #include "pins.h"
 #include "subsystem.h"
 #include "coils.h"
@@ -15,14 +15,14 @@ unsigned terminal_stack[2000];
 //stack for sub_events
 unsigned sub_stack[1000];
 
-//make printf and friends use async
+//make printf and friends use async <-- Updated
 int __putchar(int c){
-  return UCA1_TxChar(c);
+  return UCA2_TxChar(c);
 }
 
 //make printf and friends use async
 int __getchar(void){
-  return UCA1_Getc();
+  return UCA2_Getc();
 }
 
 
@@ -36,16 +36,19 @@ void main(void){
   //TESTING: set log level to report everything by default
   set_error_level(0);
   //initialize UART
-  //NOTE old code UCA1_init_UART(UART_PORT,UART_TX_PIN_NUM,UART_RX_PIN_NUM);
-  UCA1_init_UART();
+
+  //initialize UART <-- Updated
+  UCA2_init_UART(UART_PORT,UART_TX_PIN_NUM,UART_RX_PIN_NUM);
 
   // innit. coil timer and stuff
   coils_init();
 
   //setup bus interface
   initARCbus(0x1F);
+
   //init complete turn on LED0 and all others off
   P7OUT=BIT0;
+
   // starts coil timer
   coils_start();
 

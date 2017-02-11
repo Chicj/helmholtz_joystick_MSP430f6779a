@@ -8,7 +8,7 @@
 #include <ARCbus.h>
 #include <stdlib.h>
 #include <errno.h>
-#include <UCA1_uart.h>
+#include <UCA2_uart.h>
 #include "pins.h"
 #include "coils.h"
 #include "LED.h"
@@ -140,7 +140,7 @@ int spin_cmd(char *argv[],unsigned short argc){
   mag=atoi(argv[2]);
   coil_spin(rate,mag);
   printf("Spinning press any key to exit\r\n");
-  while(UCA1_CheckKey()==EOF){
+  while(UCA2_CheckKey()==EOF){
     d1=P4OUT;
     d2=(d1&COIL2_DIR_MASK)>>COIL2_DIR_SHIFT;
     d1=(d1&COIL1_DIR_MASK)>>COIL1_DIR_SHIFT;

@@ -1,19 +1,19 @@
 <!DOCTYPE CrossStudio_Project_File>
-<solution Name="Executable_1" target="9" version="2">
-  <project Name="Executable_1">
+<solution Name="E-mag_demo" target="9" version="2">
+  <project Name="E-mag_demo">
     <configuration
       Name="Common"
       Platform="MSP430"
-      Target="MSP430F2618"
+      Target="MSP430F6779A"
       build_use_hardware_multiplier="32-Bit Multiplier"
       c_system_include_directories="$(StudioDir)/include;$(PackagesDir)/include;$(ARC_prefix)/include"
       debug_threads_script="$(PackagesDir)/libraries/libctl/source/threads.js"
       libctl="Yes"
-      macros="ARC_prefix=Z:/ARC-1/ARC1-Software"
+      macros="ARC_prefix=Z:/ARC-2/ARC2-Software"
       link_symbol_definitions="CTL_IRQ_STACK_SIZE=128"
-      linker_memory_map_file="$(PackagesDir)/targets/msp430/MSP430F2618.xml"
+      linker_memory_map_file="$(PackagesDir)/targets/msp430/MSP430F6779A.xml"
       linker_section_placement_file="$(StudioDir)/targets/section_placement_info_abcd_iv64.xml"
-      msp430_identify_string="MSP430F2618"
+      msp430_identify_string="MSP430F6779A"
       msp430_insn_set="MSP430X"
       msp430_memory_size="1M"
       project_directory=""

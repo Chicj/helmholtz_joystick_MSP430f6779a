@@ -1,7 +1,7 @@
 function joystick()
 %test scrpit for E-mag demo
-%change comm to use script
-s=serial('COM3','BaudRate',9600);
+%change to the correct MSP comm port to use script
+s=serial('COM4','BaudRate',9600);
 fopen(s);
 %create joystick object 
 joy=vrjoystick(1);
