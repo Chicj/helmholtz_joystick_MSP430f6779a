@@ -1,0 +1,78 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Allegro Netrev Import Logic                                      )
+(                                                                     )
+(    Drawing          : dev-template-board.brd                        )
+(    Software Version : 16.6-2015S051                                 )
+(    Date/Time        : Wed Dec 23 09:26:32 2015                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+------ Directives ------------
+
+Ripup etch:                  No
+Ripup delete first segment:  No
+Ripup retain bondwire:       No
+Ripup symbols:               Always
+Missing symbol has error:    No
+DRC update:                  Yes
+Schematic directory:         'Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro'
+Design Directory:            '.'
+Old design name:             'Z:/Personal/O'Dell, Chic/Emag demo/board/dev-template-board.brd'
+New design name:             'Z:/Personal/O'Dell, Chic/Emag demo/board/dev-template-board.brd'
+
+CmdLine: netrev -$ -i Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro -y 1 -q netrev_constraint_report.xml Z:/Personal/O'Dell, Chic/Emag demo/board/#Taaaaam07912.tmp
+
+------ Preparing to read pst files ------
+
+Starting to read Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro/pstchip.dat 
+   Finished reading Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro/pstchip.dat (00:00:00.11)
+Starting to read Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro/pstxprt.dat 
+   Finished reading Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro/pstxprt.dat (00:00:00.00)
+Starting to read Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro/pstxnet.dat 
+   Finished reading Z:/Personal/O'Dell, Chic/Emag demo/schematic/allegro/pstxnet.dat (00:00:00.01)
+
+------ Oversights/Warnings/Errors ------
+
+
+------ Library Paths ------
+MODULEPATH =  . 
+           C:/Cadence/SPB_16.6/share/local/pcb/modules 
+
+PSMPATH =  Z:/SSEP/Software/Cadence/Footprints 
+
+PADPATH =  Z:/SSEP/Software/Cadence/Footprints 
+
+
+------ Summary Statistics ------
+
+
+netrev run on Dec 23 9:26:32 2015
+   DESIGN NAME : 'EMAG_DEMO'
+   PACKAGING ON Jun  8 2015 17:42:25
+
+   COMPILE 'logic'
+   CHECK_PIN_NAMES OFF
+   CROSS_REFERENCE OFF
+   FEEDBACK OFF
+   INCREMENTAL OFF
+   INTERFACE_TYPE PHYSICAL
+   MAX_ERRORS 500
+   MERGE_MINIMUM 5
+   NET_NAME_CHARS '#%&()*+-./:=>?@[]^_`|'
+   NET_NAME_LENGTH 24
+   OVERSIGHTS ON
+   REPLACE_CHECK OFF
+   SINGLE_NODE_NETS ON
+   SPLIT_MINIMUM 0
+   SUPPRESS   20
+   WARNINGS ON
+
+ No error detected
+ No oversight detected
+ No warning detected
+
+cpu time      0:01:11
+elapsed time  0:00:00
+

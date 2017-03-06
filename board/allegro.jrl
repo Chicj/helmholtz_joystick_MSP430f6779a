@@ -1,0 +1,25 @@
+\t (00:00:00) allegro 16.6-2015 S051 (v16-6-112EA) Windows 32
+\t (00:00:00)     Journal start - Tue Jul 26 14:29:56 2016
+\t (00:00:00)         Host=SSEP-5 User=cjodell2 Pid=7148 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_16.6\tools\pcb\bin\allegro.exe
+\t (00:00:00) 
+   (00:00:00) *Error* load: can't access file - "./FloWare/flw_startup"
+   (00:00:00) *Error* eval: undefined function - _FLW_STARTUP_main
+\t (00:00:01) Opening existing design...
+\i (00:00:03) fillin no 
+\e (00:00:03) Failed to open design since it is locked - Z:/Personal/O'Dell, Chic/Emag demo/board/dev-template-board.brd
+\t (00:00:03) Starting new design...
+\i (00:00:03) trapsize 641
+\i (00:00:03) trapsize 629
+\i (00:00:03) trapsize 643
+\i (00:00:03) trapsize 920
+\i (00:00:04) generaledit 
+\i (00:00:12) open 
+\i (00:01:13) fillin "Z:\SSEP\Software\Cadence\Footprints\CONM24.dra"
+\i (00:01:13) cd "Z:\SSEP\Software\Cadence\Footprints"
+\t (00:01:13) Opening existing design...
+\i (00:01:13) trapsize 440
+\i (00:01:13) trapsize 431
+\i (00:01:13) trapsize 440
+\i (00:01:14) trapsize 440
+\t (00:01:14)     Journal end - Tue Jul 26 14:31:10 2016

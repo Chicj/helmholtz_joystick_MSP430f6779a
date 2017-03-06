@@ -1,0 +1,57 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    NC DRILL Log                                                     )
+(                                                                     )
+(    Drawing          : dev-template-board.brd                        )
+(    Software Version : 16.6-2015S051                                 )
+(    Date/Time        : Wed Dec 23 09:45:08 2015                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file 'nc_param.txt' ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		2.5
+ MACHINE-OFFSET		x:0.00000	y:0.00000   (inch)
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		ENGLISH
+ TOOL-ORDER		INCREASING
+ REPEAT-CODES		YES
+ SUPPRESS-LEAD-ZEROES	NO
+ SUPPRESS-TRAIL-ZEROES	NO
+ SUPPRESS-EQUAL		NO
+ TOOL-SELECT		NO
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		NO
+ SEPARATE-ROUTING	NO
+ OPTIMIZE_DRILLING	NO
+ ENHANCED_EXCELLON	NO
+ SCALE			1.000000
+
+
+
+ Drill files being output to directory 'Z:/Personal/O'Dell, Chic/Emag demo/board' ...
+
+
+
+     'dev-template-board-1-2.drl' created for holes connecting TOP and BOTTOM
+     ------------------------------------------------------------------------
+
+           Num     Size      +/- Tolerance     Plating   Quantity
+
+            1.  28.0000    0.0000/  0.0000      PLATED         20
+            2.  40.0000    0.0000/  0.0000      PLATED        115
+            3.  63.0000    0.0000/  0.0000      PLATED          1
+            4.  70.9000    0.0000/  0.0000      PLATED          1
+
+     ---- Total holes:                                        137
+
+     ---- Total head travel:              3.40 feet (1.03 meters)
+

@@ -1,0 +1,139 @@
+(ExpressProject "Emag_demo"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\emag_demo.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (Board_sim_option "VHDL_flow")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory"
+       "Z:\PERSONAL\O'DELL, CHIC\EMAG DEMO\SCHEMATIC\ALLEGRO")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\EMAG_DEMO.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "TRUE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (GND
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (CON12
+      (FullPartName "CON12.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (CON32A
+      (FullPartName "CON32A.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VCC_CIRCLE
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-R
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (CON4
+      (FullPartName "CON4.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L298N
+      (FullPartName "L298N.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (CON2
+      (FullPartName "CON2.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (SN74ALS244
+      (FullPartName "SN74ALS244.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0"))
+    (PwrPlug_2
+      (FullPartName "PwrPlug_2.Normal")
+      (LibraryName "Z:\SSEP\SOFTWARE\CADENCE\ARCLIB.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\emag_demo.dsn")
+      (Path "Design Resources" ".\emag_demo.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\emag_demo.dsn" "SCHEMATIC1" "Top"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 497"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 1054 50 509")
+        (Scroll "-115 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\CJODELL2\DESKTOP\EMAG DEMO\SCHEMATIC\EMAG_DEMO.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Top")))
+  (MPSSessionName "cjodell2")
+  (ISPCBBASICLICENSE "false"))
